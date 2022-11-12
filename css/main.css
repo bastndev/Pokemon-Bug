@@ -1,0 +1,186 @@
+*,*::before, *::after {box-sizing: border-box;}
+
+:root{
+    --color-boton:#fff;
+    --color-backgroud:#1b1c23;
+    --color-icon:#222327;
+    --color-glass:rgba(255,255,255, 0.1);
+    --color-shadow:rgba(0,0,0,0.1);
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body{
+    background: var(--color-backgroud);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Carta - Pokemon */
+section .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 110px;
+    margin-left: 150px;
+
+}
+.box img
+{
+
+    position: relative;
+    width: 300px;
+    min-height: 300px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255, 0.2);
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+}
+/* Carta - 1 */
+
+/* Design - diseño */
+.navigation{
+
+    margin-left: -380px;
+    margin-bottom: -400px;
+}
+
+.navigation
+{
+    position: relative;
+    width: 450px;
+    padding-right: 28px;
+    height: 70px;
+    background: var(--color-boton);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.navigation ul
+{
+    display: flex;
+    width: 400px;
+}
+.navigation ul li
+{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+.navigation ul li a 
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+}
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--color-icon);
+}
+/* Hover Animation */
+.navigation ul li.active a .icon
+{
+    transform: translateY(-32px);
+}
+.navigation ul li a .text
+{
+    position: absolute;
+    color:#3c5aa6;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.navigation ul li.active a .text
+{
+    opacity: 1;
+    transform: translateY(10px);
+}
+.indicator
+{
+    top: -50%;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background:  #ffcb05;
+    border-radius: 50%;
+    border: 6px solid var(--color-backgroud);
+    transition: 0.5s;
+}
+/* Adornos a la caja */
+.indicator::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius:20px ;
+    box-shadow: 0px -10px 0 0 var(--color-backgroud);
+}
+.indicator::after
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius:20px ;
+    box-shadow: -1px -10px 0 0 var(--color-backgroud);
+}
+
+/* Ciecle botton animation */
+.navigation ul li:nth-child(1).active ~ .indicator
+{
+    transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator
+{
+    transform: translateX(calc(70px * 1 ));
+}
+.navigation ul li:nth-child(3).active ~ .indicator
+{
+    transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator
+{
+    transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator
+{
+    transform: translateX(calc(70px * 4));
+}
+/* asasfas */
+
